@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Jayesh Lagad - SQL Developer Portfolio</title>
+<style>
+  /* Reset and base */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0; padding: 0;
+    background: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+  }
+  a {
+    color: #03dac6;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  /* Container */
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  header {
+    text-align: center;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #03dac6;
+  }
+  header h1 {
+    font-size: 3rem;
+    margin-bottom: 8px;
+    color: #03dac6;
+  }
+  header p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #b0f8f1;
+  }
+  /* Sections */
+  section {
+    margin-top: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+  section:last-child {
+    border-bottom: none;
+  }
+  h2 {
+    color: #03dac6;
+    border-left: 6px solid #03dac6;
+    padding-left: 12px;
+    margin-bottom: 16px;
+    font-weight: 700;
+  }
+
+  /* About */
+  #about p {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  /* Skills */
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 10px;
+  }
+  .skill {
+    background: #03dac6;
+    color: #121212;
+    font-weight: 700;
+    padding: 10px 16px;
+    border-radius: 24px;
+    box-shadow: 0 2px 6px rgba(3, 218, 198, 0.5);
+    transition: transform 0.3s;
+    cursor: default;
+  }
+  .skill:hover {
+    transform: scale(1.05);
+  }
+
+  /* Experience & Projects */
+  .job, .project {
+    margin-bottom: 20px;
+  }
+  .job h3, .project h3 {
+    color: #b0f8f1;
+    margin-bottom: 6px;
+  }
+  .job .time, .project .time {
+    font-style: italic;
+    color: #999;
+    margin-bottom: 10px;
+  }
+  ul {
+    padding-left: 20px;
+    margin-top: 6px;
+  }
+  ul li {
+    margin-bottom: 8px;
+  }
+
+  /* Contact */
+  #contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+  }
+  #contact label {
+    font-weight: 700;
+  }
+  #contact input, #contact textarea {
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+  }
+  #contact input:focus, #contact textarea:focus {
+    outline: 2px solid #03dac6;
+  }
+  #contact button {
+    background: #03dac6;
+    color: #121212;
+    font-weight: 700;
+    border: none;
+    padding: 14px 0;
+    border-radius: 36px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+  }
+  #contact button:hover {
+    background-color: #00bfa5;
+  }
+  /* Footer */
+  footer {
+    text-align: center;
+    margin: 40px 0 20px;
+    color: #666;
+    font-size: 0.9rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 2.4rem;
+    }
+    .skills-list {
+      justify-content: center;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Jayesh Lagad</h1>
+      <p>SQL Developer | Database Design & Query Optimization Specialist</p>
+      <p>📞 +91 9112213512 | 📧 <a href="mailto:jayesh9.jl@gmail.com">jayesh9.jl@gmail.com</a> | 
+         <a href="https://linkedin.com/in/jayeshlagad" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+    </header>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am a dedicated SQL Developer with over 2 years of experience in designing and optimizing databases. I specialize in query enhancement, performance tuning, and creating scalable database solutions that help businesses achieve data reliability and efficiency.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Core Skills</h2>
+      <div class="skills-list">
+        <div class="skill">SQL</div>
+        <div class="skill">Query Optimization</div>
+        <div class="skill">Database Design</div>
+        <div class="skill">Stored Procedures & Functions</div>
+        <div class="skill">Indexing Strategies</div>
+        <div class="skill">MySQL</div>
+        <div class="skill">PostgreSQL</div>
+        <div class="skill">Performance Tuning</div>
+        <div class="skill">Data Analysis</div>
+        <div class="skill">Core Java</div>
+        <div class="skill">HTML & CSS</div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="job">
+        <h3>SQL Developer - Vyankatesh Software Solutions</h3>
+        <div class="time">2023 – Present</div>
+        <ul>
+          <li>Designed and developed optimized database schemas for the Trans 9 Transportation project, improving data integrity and query responsiveness.</li>
+          <li>Enhanced query performance by 30% through strategic indexing and query rewriting.</li>
+          <li>Conducted load testing and implemented caching strategies that improved application responsiveness by 20%.</li>
+          <li>Collaborated closely with developers and analysts to provide advanced SQL solutions and training on best practices.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>RTO Management System</h3>
+        <div class="time">BSc Final Year Project</div>
+        <p>Developed a web-based solution using Java, PostgreSQL, HTML & CSS to digitize vehicle and license-related processes.</p>
+        <ul>
+          <li>Created optimized database structures to efficiently handle user requests and data validation.</li>
+          <li>Implemented modules for learner license and driver license status checks, improving user self-service capabilities.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form id="contactForm" onsubmit="handleSubmit(event)">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required placeholder="Your Name" />
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required placeholder="Your Email" />
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Write your message here..."></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Jayesh Lagad. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      const name = event.target.name.value.trim();
+      const email = event.target.email.value.trim();
+      const message = event.target.message.value.trim();
+      if(name && email && message) {
+        alert('Thank you for reaching out, ' + name + '! I will get back to you soon.');
+        event.target.reset();
+      } else {
+        alert('Please fill in all fields before submitting.');
+      }
+    }
+  </script>
+</body>
+</html>
