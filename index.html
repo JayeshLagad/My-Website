@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jayesh Lagad - SQL Developer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="profile-section">
+  <img src="images/Jayesh_Lagad_Logo2.png" alt="Jayesh Lagad" class="profile-img">
+  <h2 class="profile-name">Jayesh Lagad</h2>
+</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#interests">Interests</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sections: hidden by default -->
+  <section id="home" class="content-section">
+    <h2>Welcome</h2>
+    <p>Welcome to my personal website! I am a dedicated SQL developer with a passion for technology.</p>
+  </section>
+
+  <section id="about" class="content-section">
+    <h2>About Me</h2>
+    <p>Dedicated and detail-oriented SQL developer with 2.4 years of experience in designing, 
+developing and optimizing database. Skilled in query optimization, performance tuning and 
+database architect. Strong problem-solving abilities and a passion for continuous learning in 
+the ever-evolving field of technology.</p>
+  </section>
+
+  <section id="experience" class="content-section">
+    <h2>Experience</h2>
+    <p>Vyankatesh Software Solutions, Wagholi, Pune.</p>
+
+    <p>SQL Developer </p>
+    <pre>Jan 2023 - May 2025</pre>
+    <li> Designed and implemented optimized database schemas for the Trans9 Transportation project, 
+improving data storage and retrieval efficiency. </li>
+    <li>Enhanced query performance by analyzing execution plans and implementing indexing 
+strategies, leading to 30% faster data retrieval. </li>
+    <li>Performed performance tuning and troubleshooting to ensure database stability and scalability.</li>
+    <li>Conducted load testing to validate database performance under real-world conditions.</li>
+    <li>Implemented caching mechanisms to reduce redundant database queries, improving system 
+responsiveness by 20%</li>
+    <li>Maintained comprehensive documentation of SQL queries, stored procedures, and database 
+architecture to facilitate team collaboration.</li>
+    <li>Worked closely with cross-functional teams to understand business requirements and deliver 
+tailored data solutions.</li>
+    <li>Diagnosed and resolved database-related issues, ensuring minimal downtime and system 
+reliability.</li>
+    <li>Provided technical support and training to clients and internal teams on database best practices.</li>
+
+  </section>
+
+  <section id="education" class="content-section">
+    <h2>Education</h2>
+    <p>BSc Computer Science - Pune University</p>
+    <p>Pratibha College of Commerce and Computer Studies, Chinchwad, Pune.</p>
+    <p>CGPA - 8.11</p>
+  </section>
+
+  <section id="projects" class="content-section">
+    <h2>Projects</h2>
+    <p>RTO Management System – Final Year BSc (CS)</p> 
+    <p>Tech Stack: Java (Backend), PostgreSQL (Database), HTML & CSS (Frontend)</p>
+    <li>Developed a web-based RTO system to digitize and streamline vehicle and license-related 
+        processes.</li>
+    <li>Designed and optimized database structures to handle user requests efficiently.</li>
+    <li>Implemented a module for checking LL and DL status, improving accessibility for users.</li>
+  </section>
+
+  <section id="skills" class="content-section">
+    <h2>Skills</h2>
+    <ul>
+      <li>MySQL, PostgreSQL</li>
+    </ul>
+  </section>
+
+  <section id="certifications" class="content-section">
+    <h2>Certifications</h2>
+    <ul>
+      <li>  Full Stack Java Developer -                    2023 </li>
+        <li> Profound Edutech Pvt Ltd -                    2022</li>  
+          <li> Fundamental of Digital Marketing - Google   2022</li> 
+           <li> Software Project Management - Barclays     2022</li>  
+            <li> Corporate Readiness Programme - GTT       2021</li>
+    </ul>
+  </section>
+  <section id="interests" class="content-section">
+    <h2>Interests</h2>
+    <ul>
+      <li>Technology, Sports, Trekking</li>
+    </ul>
+  </section>
+ <form id="inquiryForm" class="inquiry-form">
+  <h2>Have an Inquiry?</h2>
+
+  <div id="formNotification" class="form-notification" style="display:none;"></div>
+  <input type="name" name="name" placeholder="Your name" required/>
+  <input type="email" name="email" placeholder="Your Email" required />
+  <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+  <!-- Add more fields if needed -->
+  <button type="submit">Send Inquiry</button>
+</form>
+
+ <footer>
+    <p>&copy; 2023 Jayesh Lagad. All rights reserved.</p>
+  </footer>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll("nav a");
+    const sections = document.querySelectorAll(".content-section");
+    let visibleSectionId = null;
+
+    links.forEach(link => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("href").substring(1);
+        const targetSection = document.getElementById(targetId);
+
+         if (visibleSectionId === targetId) {
+            // Same section clicked → hide it with fade-out
+            targetSection.classList.remove("fade-in");
+            targetSection.classList.add("fade-out");
+
+            setTimeout(() => {
+              targetSection.style.display = "none";
+              targetSection.classList.remove("fade-out");
+            }, 500);
+
+            visibleSectionId = null;
+
+        } else {
+            // Hide all first
+            sections.forEach(section => {
+              if (section.style.display === "block") {
+                section.classList.remove("fade-in");
+                section.classList.add("fade-out");
+                setTimeout(() => {
+                  section.style.display = "none";
+                  section.classList.remove("fade-out");
+                  
+                }, 500);
+              }
+            });
+            // Then show target
+            setTimeout(() => {
+              targetSection.style.display = "block";
+              targetSection.classList.add("fade-in");
+              visibleSectionId = targetId;
+
+              targetSection.scrollIntoView({ behavior: "smooth", block: "end" });
+            }, 500); // wait until others fade out
+            
+        }
+      });
+    });
+  });
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("inquiryForm");
+  const notification = document.getElementById("formNotification");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    fetch("https://formspree.io/f/movdogak", {
+      method: "POST",
+      body: formData,
+      headers: { Accept: "application/json" }
+    })
+      .then(response => {
+        if (response.ok) {
+          form.reset();
+          notification.textContent = "✅ Your inquiry has been sent successfully!";
+          notification.style.color = "limegreen";
+        } else {
+          throw new Error("Something went wrong!");
+        }
+      })
+      .catch(error => {
+        notification.textContent = "❌ " + error.message;
+        notification.style.color = "red";
+      })
+      .finally(() => {
+        notification.style.display = "block";
+        targetSection.classList.add("fade-in");
+targetSection.scrollIntoView({ behavior: "smooth", block: "end" });
+
+      });
+  });
+});
+</script>
+
+
+</body>
+</html>
